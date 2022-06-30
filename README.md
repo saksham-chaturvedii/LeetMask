@@ -7,5 +7,4 @@
 
 ## 👉🏽 Checkout the [Notion Doc](https://saksham-chaturvedi.notion.site/LeetCode-Profile-View-Blocker-04b6ae64a7134ead8cb604804259aa7d) for complete documentation.
 
-https://user-images.githubusercontent.com/81289215/176777827-035c0d1a-c247-420b-9632-2a5b339f836a.mov
-
+![notion-walkthrough](https://user-images.githubusercontent.com/81289215/176778641-f51835a2-6476-4632-8d35-d990d86b92bf.gif)
