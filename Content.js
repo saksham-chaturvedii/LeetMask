@@ -60,8 +60,8 @@ const generateStyle = () => {
 const generateHTML = (username) => {
   return `
   <div class="message"> 
-  <div id="m1">Stay Focussed 🎯</div>
-  <div id="m2" style="visibility:hidden;">GET BACK TO THE GRIND</div>
+  <div id="m1">Stay Focussed</div>
+  <div id="m2" style="visibility:hidden;">GET BACK TO THE GRIND 👋🏽</div>
   </div>`;
 };
 
