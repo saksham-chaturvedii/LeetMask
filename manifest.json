@@ -1,12 +1,18 @@
 {
-  "name": "prevent-visiting-profiles",
-  "description": "Extension that prevents you from checking out different profiles on Leetcode. Be it your own (admiring the streak in the submissions graph) or someone else's profile that you may have found under a discussion post.",
+  "name": "LeetCode - Profile View Blocker",
+  "description": "Blocks you from viewing profiles on LeetCode including you own.",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [
     {
+      "run_at": "document_end",
       "matches": ["https://leetcode.com/*"],
       "js": ["Content.js"]
     }
-  ]
+  ],
+  "permissions": ["webNavigation"],
+  "icons": {
+    "16": "icons/eye-crossed-16.png",
+    "128": "icons/eye-crossed-128.png"
+  }
 }
