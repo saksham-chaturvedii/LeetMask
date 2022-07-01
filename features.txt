@@ -1,5 +1,0 @@
-A chrome extension that prevents you from checking out different profiles on Leetcode. Be it your own (admiring the streak in the submissions graph) or someone else's profile that you may have found under a discussion post.
-
-if my profile then show: Hi, I just wanted to remind you that, play for the love of the game, dont count the points
-
-if i visit someone else's profile then show: I try to run my race, and not care about who's ahead of me 'cause Comparison is the recipe for depression and questionin' your integrity Hope I don't let it get to me but..
