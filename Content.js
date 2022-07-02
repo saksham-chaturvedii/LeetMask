@@ -3,10 +3,8 @@ const url = window.location.pathname;
 let questionPage = false;
 
 if (
-  (url.includes("/problems/") &&
-    !url.includes("/submissions/") &&
-    !url.includes("/discuss/")) ||
-  url.includes("/contest/biweekly-contest-") ||
+  (url.includes("/problems/") && !url.includes("/submissions/") && !url.includes("/discuss/")) ||
+  (url.includes("/problems/") && url.includes("/contest/biweekly-contest-")) ||
   url.includes("/contest/weekly-contest-")
 )
   questionPage = true;
@@ -81,13 +79,9 @@ if (`/${username}/` === window.location.pathname) {
   document.body.innerHTML = generateHTML(username);
 } else if (questionPage) {
   const callback = (mutations, observer) => {
-    console.log(mutations);
-    const difficultyTag =
-      document.querySelector("[diff]") ||
-      document.getElementsByClassName("pull-right label label-Easy round")[0]; // do for hard & med
+    const difficultyTag = document.querySelector("[diff]");
     if (difficultyTag) {
       difficultyTag.innerText = "💩";
-      difficultyTag.style.background = "#f5f5f5";
       difficultyTag.style.color = "#FFFFFF";
       observer.disconnect();
     }
@@ -95,7 +89,6 @@ if (`/${username}/` === window.location.pathname) {
 
   var observer = new MutationObserver(callback);
   observer.observe(document, {
-    attributes: true, // observe attributes
     childList: true, // observe direct children
     subtree: true, // and lower descendants too
   });
