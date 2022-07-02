@@ -1,4 +1,15 @@
 const username = document.title.replace(" - LeetCode Profile", "");
+const url = window.location.pathname;
+let questionPage = false;
+
+if (
+  (url.includes("/problems/") &&
+    !url.includes("/submissions/") &&
+    !url.includes("/discuss/")) ||
+  url.includes("/contest/biweekly-contest-") ||
+  url.includes("/contest/weekly-contest-")
+)
+  questionPage = true;
 
 const generateStyle = () => {
   setTimeout(() => {
@@ -68,4 +79,28 @@ const generateHTML = (username) => {
 if (`/${username}/` === window.location.pathname) {
   document.head.innerHTML = generateStyle();
   document.body.innerHTML = generateHTML(username);
+} else if (questionPage) {
+  const callback = (mutations, observer) => {
+    console.log(mutations);
+    const difficultyTag =
+      document.querySelector("[diff]") ||
+      document.getElementsByClassName("pull-right label label-Easy round")[0]; // do for hard & med
+    if (difficultyTag) {
+      difficultyTag.innerText = "💩";
+      difficultyTag.style.background = "#f5f5f5";
+      difficultyTag.style.color = "#FFFFFF";
+      observer.disconnect();
+    }
+  };
+
+  var observer = new MutationObserver(callback);
+  observer.observe(document, {
+    attributes: true, // observe attributes
+    childList: true, // observe direct children
+    subtree: true, // and lower descendants too
+  });
 }
+
+// https://javascript.info/mutation-observer
+// We're repeatedly keep observing the "document" object. And, as soon as it loads, we call the callback function with the help of the "MutationObserver" object.
+// Now, in that function we check if we have yet found the attribute "diff". If we have, we change the difficulty and stop observing the "document" object.
