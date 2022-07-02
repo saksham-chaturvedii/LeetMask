@@ -2,11 +2,8 @@ const username = document.title.replace(" - LeetCode Profile", "");
 const url = window.location.pathname;
 let questionPage = false;
 
-if (
-  (url.includes("/problems/") && !url.includes("/submissions/") && !url.includes("/discuss/")) ||
-  (url.includes("/problems/") && url.includes("/contest/biweekly-contest-")) ||
-  url.includes("/contest/weekly-contest-")
-)
+// if page has question description, then it's a question page
+if (url.includes("/problems/") && !url.includes("/submissions/") && !url.includes("/discuss/"))
   questionPage = true;
 
 const generateStyle = () => {
@@ -74,10 +71,13 @@ const generateHTML = (username) => {
   </div>`;
 };
 
+// If viewing profile, remind not to do so
 if (`/${username}/` === window.location.pathname) {
   document.head.innerHTML = generateStyle();
   document.body.innerHTML = generateHTML(username);
-} else if (questionPage) {
+}
+// If viewing question, hide its difficulty
+else if (questionPage) {
   const callback = (mutations, observer) => {
     const difficultyTag = document.querySelector("[diff]");
     if (difficultyTag) {
