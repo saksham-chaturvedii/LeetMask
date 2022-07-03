@@ -1,6 +1,6 @@
 {
   "name": "Leetmask",
-  "description": "A tool to help you practice Data Structures & Algorithms the best way possible. The extension hides the difficulty tag of the problem. With that, it also blocks you from viewing your profile (so you don't feel done after solving a couple of questions and achieving the green box on the submission heat map) and anyone else's profile (eliminating any chance of subconscious comparison).",
+  "description": "Leetmask hides the difficulty tag of the problem and stops you from accessing any LeetCode profile, including your own.",
   "version": "1.1.1",
   "manifest_version": 3,
   "content_scripts": [
