@@ -6,6 +6,7 @@
 
 <details>
   <summary> <b>Click to know more!</b></summary>
+  
   ## 𝐐. 𝐖𝐡𝐲 𝐡𝐢𝐝𝐞 𝐭𝐡𝐞 𝐝𝐢𝐟𝐟𝐢𝐜𝐮𝐥𝐭𝐲 𝐭𝐚𝐠 𝐨𝐟 𝐚 𝐩𝐫𝐨𝐛𝐥𝐞𝐦? <br />
   <p>𝐀. This feature attempts to improve your performance by replacing the difficulty tag with a cute little- '💩' emoji. <br/>
   Knowing the problem's difficulty level before getting to solve it can create a mental blocker. Failing to solve an "Easy" one can lower your confidence and knowing that it's a "Hard" one, may make you give up early. <br/><br/>
