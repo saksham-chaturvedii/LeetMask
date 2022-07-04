@@ -10,7 +10,6 @@
       "js": ["Content.js"]
     }
   ],
-  "permissions": ["webNavigation"],
   "icons": {
     "16": "icons/eye-crossed-16.png",
     "128": "icons/eye-crossed-128.png"
